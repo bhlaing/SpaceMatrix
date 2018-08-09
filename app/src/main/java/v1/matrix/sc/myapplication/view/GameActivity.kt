@@ -5,11 +5,6 @@ import android.graphics.Point
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import v1.matrix.sc.myapplication.view.widget.GameView
-import android.view.Display
-
-
-
-
 
 class GameActivity : AppCompatActivity() {
     private var gameView: GameView? = null

@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.MatrixActivity" />
-        <activity android:name=".view.GridGameActivity" />
+        <activity android:name=".view.SpaceInvaderActivity" />
         <activity android:name=".view.GameActivity"></activity>
     </application>
 

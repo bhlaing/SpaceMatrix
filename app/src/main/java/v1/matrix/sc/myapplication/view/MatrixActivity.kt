@@ -4,6 +4,8 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.MotionEvent
+import android.view.View
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_matrix.*
 import v1.matrix.sc.myapplication.R
@@ -21,11 +23,13 @@ class MatrixActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_matrix)
-        tempButton.setOnClickListener{
-            var intent  = Intent(this, GameActivity::class.java)
-            startActivity(intent)
-        }
-
+        matrixView.setOnTouchListener(object : View.OnTouchListener {
+            override fun onTouch(v: View, m: MotionEvent): Boolean {
+                var intent  = Intent(v.context, SpaceInvaderActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+        })
     }
 
     override fun onResume() {
